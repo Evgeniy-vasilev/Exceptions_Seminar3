@@ -1,5 +1,12 @@
+import controller.UserController;
+import model.User;
+import view.View;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        User model = new User();
+        View view = new View();
+        UserController controller = new UserController(model, view);
+        controller.CreateUser();
     }
 }
